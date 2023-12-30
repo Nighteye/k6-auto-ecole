@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>K6 AUTO ECOLE - Code accéléré</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;700&display=swap');
+        </style>
+        <script src="https://kit.fontawesome.com/47be71303f.js" crossorigin="anonymous"></script>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeCPNqA52ScKW0ogmG2m1roZ8pwO8SWD0&callback=console.debug&libraries=maps,marker&v=beta"></script>
+        <script src="js/menu.js"></script>
+    </head>
+
+    <body>
+        <div id="root">
+            <div id="topnav" class="topnav">
+                <a id="home_link" href="index.html"><img src="images/logo-principal.svg" alt="logo principale de K6 AUTO ECOLE"></a>
+                
+                <nav role="navigation" id="classicMenu">
+                    <a class="boutonTopNav" href="conduite.html">Conduite accélérée</a>
+                    <a class="boutonTopNav" href="code.html">Code accéléré</a>
+                    <a class="boutonTopNav" href="contact.html">Contact</a>
+                    <a href="inscription.html"><button class="bouton boutonPrincipal" type="button">
+                        Je m'inscris
+                    </button></a>
+                </nav>
+
+                <div id="menuReduit">
+                    <a href="inscription.html"><button class="bouton boutonPrincipal" type="button">
+                        Je m'inscris
+                    </button></a>
+                    <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+
+                <nav role="navigation" id="topnav_responsive_menu">
+                    <ul>
+                        <li><a id="home_link" href="index.html"><img src="images/logo-principal.svg" alt="logo principale de K6 AUTO ECOLE"></a></li>
+                        <li><a class="boutonTopNav" href="index.html">Accueil</a></li>
+                        <li><a class="boutonTopNav" href="conduite.html">Conduite accélérée</a></li>
+                        <li><a class="boutonTopNav" href="code.html">Code accéléré</a></li>
+                        <li><a class="boutonTopNav" href="inscription.html">Inscription</a></li>
+                        <li><a class="boutonTopNav" href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <main>
+            <header>
+                <div class="column">
+                    <img class="titreH1" src="images/speed.svg">
+                    <h1>Code accéléré</h1>
+                    <p>Prépare ton examen du code de la route en 5 jours seulement !</p>
+                    <p>Bénéficie également de <span class="montantOffre">100 € </span>de remise sur présentation de la carte étudiant !</p>
+                    <a href="inscription.html"><button class="bouton boutonPrincipal" type="button">Je m'inscris</button></a>
+                </div>
+                <img class="imageSection" src="images/code.svg" alt="Illustration d'un élève s'entrainant à passer le code avec un accompagnateur">
+            </header>
+                        
+            <img class="transition" src="images/transition-up.svg" alt="Transition entre sections">
+
+            <section class="formations">
+                <div class="column">
+                    <h2>CODE Stage accéléré en 5 jours</h2>
+                    <div class="row">
+                        <img class="imageSection" src="images/code-panneaux-route.webp" alt="Panneaux de signalisation qui illustrent le code de la route">
+                        <div class="column offreFormation">
+                            <h3>Stage Code Accéléré en 5 jours à 490€</h2>
+                            <p><b>Stage rapide et efficace !</b><br>
+                                <b>Possibilité de paiement jusqu'à 4 fois sans frais !</b></p>
+                            <p>Sur une période de 5 jours (de 9h à 12h et de 13h à 17h) soit pendant 35 heures, K6 auto-
+                                école vous propose la formation au Code de la route en accéléré avec un enseignant vous
+                                accompagnant tout au long du stage.</p>
+                            <p>Rapide et efficace, ce stage code vous prépare en très peu de temps à l'examen du code
+                                    de la route.</p>
+                            <p>Thème par thème, vous évoluerez progressivement pour maitriser le code de la route.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img class="imageSection" src="images/eleve-code.webp" alt="Une élève qui suit la formation au code de la route">
+                        <div id="offre2" class="column offreFormation">
+                            <h3>Déroulement</h3>
+                            <p>La formation se déroule en alternant les cours et les tests afin de mieux vous
+                                perfectionner. Vous passerez ensuite un examen de code blanc qui confirmera vos acquis
+                                avant de passer l'examen final dans les jours qui suivent. Si toutefois l'examen blanc n'a
+                                pas été favorable, vous pourrez continuer à compléter votre formation gratuitement en
+                                salle de code.</p>
+                            <p>Cette formule comprend :</p>
+                            <ul>
+                                <li>La Formation théorique</li>
+                                <li>1 livret Code</li>
+                                <li>1 Présentation à l'examen du Code de la Route</li>
+                                <li>1 Accompagnement à l'examen de Conduite</li>
+                                <li>1 Pack Web accès illimité au Code</li>
+                                <li>Frais d'inscription et fournitures administratives</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <img class="transition" src="images/transition-footer.svg" alt="Transition entre sections">
+
+            <footer>
+                <div class="column">
+                    <div class="infosContact">
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                            <p>55 boulevard Mansart, 21000 Dijon</p>
+                        </div>
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-clock"></i>
+                            <p>ouvert de 8h à 20h</p>
+                        </div>
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-phone-alt"></i>
+                            <p>03 55 21 21 21</p>
+                        </div>
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-mail-bulk"></i>
+                            <p>contact@k6-auto-ecole.fr</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column iconesReseaux">
+                    <a class="boutonTexte" href="#"><i class="fa-brands fa-facebook fa-3x"></i></a>
+                    <a class="boutonTexte" href="#"><i class="fa-brands fa-instagram fa-3x"></i></a>
+                </div>
+                <div class="column">
+                    <p><a class="boutonTexte" href="mentions.html">Mentions légales</a></p>
+                    <img src="images/logo-reduit.svg" alt="Logo de K6 AUTO ECOLE">
+                </div>
+            </footer>
+         </main>
+    </body>
+</html>

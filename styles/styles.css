@@ -1,0 +1,811 @@
+:root {
+    --Texte: #2D0E30;
+    --Arrire-plan: #FBFBFF;
+    --Principale: #7A79B2;
+    --principale-80: #9594C1;
+    --principale-60: #AFAFD1;
+    --principale-40: #CAC9E0;
+    --principale-20: #E4E4F0;
+    --Secondaire: #9694EB;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: normal;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    background-color: var(--Arrire-plan);
+    color: var(--Texte);
+}
+
+/* NAV BAR */
+
+#root {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+#topnav {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: var(--Arrire-plan);
+    max-height: 52px;
+}
+
+#classicMenu {
+    display: none;
+}
+
+#menuReduit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding-left: 24px;
+}
+
+#home_link img {
+    width: 91.953px;
+    height: 48px;
+}
+
+/* show responsive menu and position at the right of the screen */
+#topnav_responsive_menu {
+    display: block;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 99;
+
+    transform-origin: 0% 0%;
+    transform: translate(-200%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#topnav_responsive_menu ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    min-width: 50vw;
+    height: 100vh;
+    padding: 24px;
+    text-align: center;
+    list-style-type: none;
+    background: var(--Arrire-plan);
+}
+
+#topnav_responsive_menu li {
+    padding: 12px 24px;
+}
+
+#topnav_responsive_menu.open {
+    transform: none;
+    position: fixed;
+}
+
+/* ******************** HAMBURGER ICON ******************** */
+#topnav_hamburger_icon {
+    display: block;
+    position: relative;
+    width: 33px;
+    height: 28px;
+    z-index: 100;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+  }
+
+#topnav_hamburger_icon span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    margin-bottom: 5px;
+
+    background: var(--Principale);
+    border-radius: 3px;
+
+    z-index: 100;
+
+    opacity: 1;
+    left: 0;
+
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+
+  /* set the 3 spans position to look like a hamburger */
+  #topnav_hamburger_icon span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -o-transform-origin: left top;
+    transform-origin: left top;
+  }
+  #topnav_hamburger_icon span:nth-child(2) {
+    top: 12px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  #topnav_hamburger_icon span:nth-child(3) {
+    top: 24px;
+    -webkit-transform-origin: left bottom;
+    -moz-transform-origin: left bottom;
+    -o-transform-origin: left bottom;
+    transform-origin: left bottom;
+  }
+
+  /* change color when opening the menu */
+  #topnav_hamburger_icon.open span {
+    background: var(--Secondaire);
+  }
+
+  /* the first span rotates 45° \ */
+  #topnav_hamburger_icon.open span:nth-child(1) {
+    width: 110%;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* the second span disappears */
+  #topnav_hamburger_icon.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  /* the last span rotates -45° / */
+  #topnav_hamburger_icon.open span:nth-child(3) {
+    width: 110%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+/* SECTIONS */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    top: 100px;
+}
+
+main > header, section, footer, .column, .row {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+
+main > header, section, footer {
+
+    padding: 24px;
+}
+
+section.offres, 
+section.formations,
+section.avis,
+section.contact,
+section.inscription,
+section.mentionslegales {
+    background: var(--Principale);
+    color: var(--Arrire-plan);
+}
+
+main > header, section.offres, section.formations .row {
+    gap: 0;
+}
+
+main > header .imageSection,
+section.offres .imageSection, 
+section.formations .imageSection {
+    width: 0;
+}
+
+.titreH1 {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+img.titreH1 {
+    width: 96px;
+}
+
+.containerOffres {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.cartesOffres {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.carteOffre {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 40px;
+    border: 1px solid var(--Secondaire);
+    background: var(--Arrire-plan);
+    color: var(--Texte);
+    box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.40);
+}
+
+.carteOffre a, .carteOffre a button {
+    width: 100%;
+}
+
+.flexAvantage {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 12px;
+    row-gap: 48px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.carteAvantage {
+    display: flex;
+    width: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.carteAvantage i {
+    color: var(--Secondaire);
+}
+
+.offreFormation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.offreFormation img {
+    width: 48px;
+    height: 48px;
+}
+
+.infosContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.infosContactItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.infosContactItem i {
+    color: var(--Secondaire);
+}
+
+.avisItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.avisTexte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.photoAvis {
+    align-self: stretch;
+}
+
+.photoAlex {
+    background: center / contain no-repeat url("../images/alex.webp");
+}
+
+.photoLea {
+    background: center / contain no-repeat url("../images/lea.webp");
+}
+
+section.avis .note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+
+section.avis cite {
+    font-family: Barlow Condensed;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* MAP */
+
+.googleMap {
+    height: 150px;
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 16px;
+    border: 2px solid var(--Principale);
+}
+
+gmp-map {
+    height: 100%;
+    align-self: stretch;
+    border-radius: 8px;
+}
+
+/* LISTES */
+
+ul {
+    list-style-image: url("../images/cassis-bg.svg");
+}
+
+/* FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 12px;
+    align-self: stretch;
+}
+
+input,
+textarea{
+	width: 100%;
+}
+
+textarea{
+	width: 100%;
+	min-height: 200px;
+}
+
+/* BOUTONS */
+
+button, input.boutonTertiaire {
+    display: flex;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 16px;
+    transition: all 0.3s;
+    cursor: pointer;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+input.boutonTertiaire {
+    align-self: center;
+}
+
+.boutonPrincipal {
+    background: var(--Principale);
+    color: var(--Arrire-plan);
+    border: none;
+}
+
+.boutonPrincipal:hover {
+    background: var(--principale-80);
+}
+
+button.boutonPrincipal:active {
+    background: var(--principale-60);
+}
+
+.boutonSecondaire {
+    background: var(--Arrire-plan);
+    color: var(--Principale);
+    border-radius: 16px;
+    border: 2px solid var(--Principale);
+}
+
+.boutonSecondaire:hover {
+    background: var(--principale-20);
+}
+
+.boutonSecondaire:active {
+    background: var(--principale-40);
+}
+
+.boutonTertiaire {
+    background: var(--Principale);
+    color: var(--Arrire-plan);
+    border-radius: 16px;
+    border: 2px solid var(--Arrire-plan);
+}
+
+.boutonTertiaire:hover {
+    background: var(--principale-80);
+}
+
+.boutonTertiaire:active {
+    background: var(--principale-60);
+}
+
+.boutonTexte {
+    color: var(--Arrire-plan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.boutonTexte:hover {
+    color: var(--principale-20);
+}
+
+.boutonTexte:active {
+    color: var(--principale-40);
+}
+
+.boutonTopNav {
+    color: var(--Texte);
+    cursor: pointer;
+    font-family: Barlow Condensed;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.boutonTopNav:hover {
+    color: var(--Principale);
+}
+
+.boutonTopNav:active {
+    color: var(--principale-80);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* TITRES */
+
+h1, h2, h3, h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.carteOffre h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* TEXTE */
+
+p {
+    font-size: 14px;
+    margin: 0;
+}
+
+p span.montantOffre {
+    color: var(--Secondaire);
+    font-family: Barlow Condensed;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+p span.montantAncien {
+    color: var(--principale-60);
+    font-family: Barlow Condensed;
+    font-size: 20px;
+    text-decoration-line: line-through;
+}
+
+.texteReduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.reduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    color: var(--Secondaire);
+    font-family: Barlow Condensed;
+    font-size: 20px;
+    font-weight: 700;
+    background: center / contain no-repeat url("../images/cassis-bg.svg");
+}
+
+/* FOOTER */
+
+footer{
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    background-color: var(--Texte);
+    color: var(--Arrire-plan);
+}
+
+footer .infosContactItem i {
+    color: var(--Principale);
+}
+
+footer p a:hover{
+    color: orangered;
+}
+
+footer img {
+    width: 50px;
+}
+
+footer .iconesReseaux {
+    flex-direction: row;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+
+@media only screen and (min-width: 576px) {
+
+    /* avis */
+
+    .avisItem {
+        flex-direction: row;
+    }
+
+    .photoAvis {
+        width: 20%;
+    }
+
+    .avisTexte {
+        width: 60%;
+    }
+
+    /* google map */
+
+    .googleMap {
+        height: 370px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        text-align: start;
+    }
+
+    /* classic menu */
+
+    #menuReduit,
+    #topnav_responsive_menu {
+        display: none;
+    }
+
+    #classicMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+
+    /* sections */
+
+    main > header, section, footer {
+
+        padding: 48px;
+        flex-direction: row;
+        gap: 48px;
+    }
+
+    section.formations .row {
+        flex-direction: row;
+    }
+
+    main > header, section .column, .row {
+        gap: 48px;
+    }
+
+    main > header, section.offres, section.formations .row {
+        gap: 48px;
+    }
+    
+    main > header .imageSection,
+    section.offres .imageSection, 
+    section.formations .row .imageSection {
+        width: 50%;
+    }
+
+    main > header .column,
+    section.offres .column,
+    section.formations .row .column,
+    section.contact .column,
+    section.inscription .column {
+        width: 50%;
+    }
+
+    main > header .column {
+        text-align: center;
+    }
+
+    section.formations .row .column,
+    section.inscription .column {
+        align-items: flex-start;
+    }
+
+    footer .column {
+        width: auto;
+    }
+
+    section.inscription {
+        align-items: flex-start;
+    }
+
+    section.inscription .column {
+        justify-content: flex-start;
+    }
+
+    section.mentionslegales {
+        align-items: flex-start;
+    }
+
+    section.mentionslegales .column {
+        justify-content: flex-start;
+    }
+
+    section.noustrouver .column {
+        width: 750px;
+    }
+
+    .flexAvantage {
+        gap: 48px;
+        row-gap: 48px;
+    }
+
+    .carteAvantage {
+        gap: 24px;
+    }
+
+    .carteAvantage i {
+        transform: scale(1.5, 1.5);
+    }
+
+    .avisTexte {
+        width: 40%;
+    }
+
+    /* TAILLE DE TEXTE */
+
+    h1 {
+        font-size: 50px;
+    }
+    
+    h2 {
+        font-size: 34px;
+    }
+    
+    h3 {
+        font-size: 26px;
+    }
+    
+    .carteOffre h3 {
+        font-size: 20px;
+    }
+    
+    p {
+        font-size: 16px;
+    }
+
+    p span.montantOffre {
+        font-size: 34px;
+    }
+    
+    p span.montantAncien {
+        font-size: 26px;
+    }
+
+    .reduction {
+        font-size: 26px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    section.avis cite {
+        font-size: 26px;
+    }
+}
+
+
+
+
+
+
+
+
+

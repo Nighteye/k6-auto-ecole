@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>K6 AUTO ECOLE - Conduite accélérée</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;700&display=swap');
+        </style>
+        <script src="https://kit.fontawesome.com/47be71303f.js" crossorigin="anonymous"></script>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeCPNqA52ScKW0ogmG2m1roZ8pwO8SWD0&callback=console.debug&libraries=maps,marker&v=beta"></script>
+        <script src="js/menu.js"></script>
+    </head>
+
+    <body>
+        <div id="root">
+            <div id="topnav" class="topnav">
+                <a id="home_link" href="index.html"><img src="images/logo-principal.svg" alt="logo principale de K6 AUTO ECOLE"></a>
+                
+                <nav role="navigation" id="classicMenu">
+                    <a class="boutonTopNav" href="conduite.html">Conduite accélérée</a>
+                    <a class="boutonTopNav" href="code.html">Code accéléré</a>
+                    <a class="boutonTopNav" href="contact.html">Contact</a>
+                    <a href="inscription.html"><button class="bouton boutonPrincipal" type="button">
+                        Je m'inscris
+                    </button></a>
+                </nav>
+
+                <div id="menuReduit">
+                    <a href="inscription.html"><button class="bouton boutonPrincipal" type="button">
+                        Je m'inscris
+                    </button></a>
+                    <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+
+                <nav role="navigation" id="topnav_responsive_menu">
+                    <ul>
+                        <li><a id="home_link" href="index.html"><img src="images/logo-principal.svg" alt="logo principale de K6 AUTO ECOLE"></a></li>
+                        <li><a class="boutonTopNav" href="index.html">Accueil</a></li>
+                        <li><a class="boutonTopNav" href="conduite.html">Conduite accélérée</a></li>
+                        <li><a class="boutonTopNav" href="code.html">Code accéléré</a></li>
+                        <li><a class="boutonTopNav" href="inscription.html">Inscription</a></li>
+                        <li><a class="boutonTopNav" href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <main>
+            <header>
+                <div class="column">
+                    <img class="titreH1" src="images/speed.svg">
+                    <h1>Conduite accélérée</h1>
+                    <p>Apprends à conduire en 10 jours en suivant notre formation accélérée !</p>
+                    <p>Bénéficie également de <span class="montantOffre">100 € </span>de remise sur présentation de la carte étudiant !</p>
+                    <a href="inscription.html"><button class="bouton boutonPrincipal" type="button">Je m'inscris</button></a>
+                </div>
+                <img class="imageSection" src="images/conduite.svg" alt="Illustration d'une voiture de l'auto-école K6">
+            </header>
+                        
+            <img class="transition" src="images/transition-up.svg" alt="Transition entre sections">
+
+            <section class="formations">
+                <div class="column">
+                    <div class="row">
+                        <img class="imageSection" src="images/apprennant-conduite.webp" alt="Photo d'un élève heureux d'apprendre à conduire">
+                        <div class="column offreFormation">
+                            <h2>Conduite accélérée en 10 jours : à partir de 590 euros</h2>
+                            <h3>Sur une période de 10 jours vous suivrez 38h de cours selon le Programme
+                                de Formation Initiale, reparti de la manière suivante :</h3>
+                            <ul>
+                                <li>1 Evaluation de départ</li>
+                                <li>4 heures de travaux pratiques E1*</li>
+                                <li>22 heures de conduite individuelles</li>
+                                <li>4 heures de cours collectifs E2*</li>
+                                <li>4 heures de conduite individuelles</li>
+                                <li>4 heures de cours collectifs E3*</li>
+                                <li>4 heures de conduite individuelles</li>
+                                <li>4 heures de cours collectifs E4*</li>
+                            </ul>
+                            <p>* Les "E" font référence à des etapes du Programme National de Formation Initial.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <img class="transition" src="images/transition-footer.svg" alt="Transition entre sections">
+
+            <footer>
+                <div class="column">
+                    <div class="infosContact">
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                            <p>55 boulevard Mansart, 21000 Dijon</p>
+                        </div>
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-clock"></i>
+                            <p>ouvert de 8h à 20h</p>
+                        </div>
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-phone-alt"></i>
+                            <p>03 55 21 21 21</p>
+                        </div>
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-mail-bulk"></i>
+                            <p>contact@k6-auto-ecole.fr</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column iconesReseaux">
+                    <a class="boutonTexte" href="#"><i class="fa-brands fa-facebook fa-3x"></i></a>
+                    <a class="boutonTexte" href="#"><i class="fa-brands fa-instagram fa-3x"></i></a>
+                </div>
+                <div class="column">
+                    <p><a class="boutonTexte" href="mentions.html">Mentions légales</a></p>
+                    <img src="images/logo-reduit.svg" alt="Logo de K6 AUTO ECOLE">
+                </div>
+            </footer>
+         </main>
+    </body>
+</html>

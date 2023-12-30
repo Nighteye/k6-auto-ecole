@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>K6 AUTO ECOLE - Votre code et conduite en accéléré à Dijon</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;700&display=swap');
+        </style>
+        <script src="https://kit.fontawesome.com/47be71303f.js" crossorigin="anonymous"></script>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeCPNqA52ScKW0ogmG2m1roZ8pwO8SWD0&callback=console.debug&libraries=maps,marker&v=beta"></script>
+        <script src="js/menu.js"></script>
+    </head>
+
+    <body>
+        <div id="root">
+            <div id="topnav" class="topnav">
+                <a id="home_link" href="index.html"><img src="images/logo-principal.svg" alt="logo principale de K6 AUTO ECOLE"></a>
+                
+                <nav role="navigation" id="classicMenu">
+                    <a class="boutonTopNav" href="conduite.html">Conduite accélérée</a>
+                    <a class="boutonTopNav" href="code.html">Code accéléré</a>
+                    <a class="boutonTopNav" href="contact.html">Contact</a>
+                    <a href="inscription.html"><button class="bouton boutonPrincipal" type="button">
+                        Je m'inscris
+                    </button></a>
+                </nav>
+
+                <div id="menuReduit">
+                    <a href="inscription.html"><button class="bouton boutonPrincipal" type="button">
+                        Je m'inscris
+                    </button></a>
+                    <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+
+                <nav role="navigation" id="topnav_responsive_menu">
+                    <ul>
+                        <li><a id="home_link" href="index.html"><img src="images/logo-principal.svg" alt="logo principale de K6 AUTO ECOLE"></a></li>
+                        <li><a class="boutonTopNav" href="index.html">Accueil</a></li>
+                        <li><a class="boutonTopNav" href="conduite.html">Conduite accélérée</a></li>
+                        <li><a class="boutonTopNav" href="code.html">Code accéléré</a></li>
+                        <li><a class="boutonTopNav" href="inscription.html">Inscription</a></li>
+                        <li><a class="boutonTopNav" href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <main>
+            <header>
+                <div class="column">
+                    <img class="titreH1" src="images/speed.svg">
+                    <h1>Ton permis en accélérée avec K6 AUTO ÉCOLE</h1>
+                    <p>K6 AUTO ÉCOLE, c’est la nouvelle auto-école qui vient d’ouvrir dans le quartier des facultés de Dijon. Elle t’accueille dès aujourd’hui pour te préparer au code ou à la conduite en un temps record !</p>
+                    <a href="inscription.html"><button class="bouton boutonPrincipal" type="button">Je m'inscris</button></a>
+                </div>
+                <img class="imageSection" src="images/car.webp" alt="Illustration d'une voiture de l'auto-école K6">
+            </header>
+
+            <img class="transition" src="images/transition-up.svg" alt="Transition entre sections">
+            
+            <section class="offres">
+                <img class="imageSection" src="images/etudiante-heureuse-offre.webp" alt="Une étudiante heureuse d'avoir profité d'une offre K6">
+                <div class="column">
+                    <h2>Ne manque pas nos offres pour étudiants à prix K6 !</h2>
+                    <div class="cartesOffres">
+                        <div class="carteOffre">   
+                            <h3>Conduite accélérée</h3>
+                            <p><span class="montantOffre">490 €</span></p>
+                            <p><span class="montantAncien">590 €</span></p>
+                            <a href="conduite.html"><button class="bouton boutonSecondaire" type="button">
+                                Voir l'offre
+                            </button></a>
+                        </div>
+                        <div class="carteOffre">
+                            <h3>Code accéléré</h3>
+                            <p><span class="montantOffre">390 €</span></p>
+                            <p><span class="montantAncien">490 €</span></p>
+                            <a href="code.html"><button class="bouton boutonSecondaire" type="button">
+                                Voir l'offre
+                            </button></a>
+                        </div>
+                    </div>
+                    <div class="texteReduction">
+                        <div class="reduction">
+                            100 €
+                        </div>
+                        <p>de remise sur présentation de la carte étudiant</p>
+                    </div>
+                </div>
+            </section>
+
+            <img class="transition" src="images/transition-down.svg" alt="Transition entre sections">
+
+            <section class="avantages">
+                <div class="column">
+                    <h2>Pourquoi choisir K6 ?</h2>
+                    <div class="flexAvantage">
+                        <div class="carteAvantage">
+                            <i class="fa-solid fa-stopwatch fa-4x"></i>
+                            <h3>Permis accéléré</h3>
+                        </div>
+                        <div class="carteAvantage">
+                            <i class="fa-solid fa-star fa-4x"></i>
+                            <h3>Moniteur expérimenté</h3>
+                        </div>
+                        <div class="carteAvantage">
+                            <i class="fa-solid fa-file-signature fa-4x"></i>
+                            <h3>Inscription rapide</h3>
+                        </div>
+                        <div class="carteAvantage">
+                            <i class="fa-solid fa-piggy-bank fa-4x"></i>
+                            <h3>Formules adaptées</h3>
+                        </div>
+                        <div class="carteAvantage">
+                            <i class="fa-solid fa-user-graduate fa-4x"></i>
+                            <h3>Meilleurs taux de réussite</h3>
+                        </div>
+                        <div class="carteAvantage">
+                            <i class="fa-solid fa-chair fa-4x"></i>
+                            <h3>Places d'examens rapides</h3>
+                        </div>
+                    </div>
+                    <a href="inscription.html"><button class="bouton boutonPrincipal" type="button">
+                        Je m'inscris
+                    </button></a>
+                </div>
+            </section>
+
+            <img class="transition" src="images/transition-up.svg" alt="Transition entre sections">
+
+            <section class="formations">
+                <div class="column">
+                    <h2>Nos formations accélérées</h2>
+                    <div class="row">
+                        <img class="imageSection" src="images/apprennant-conduite.webp" alt="Photo d'un élève heureux d'apprendre à conduire">
+                        <div id="offre1" class="column offreFormation">
+                            <img src="images/wheel.svg" alt="Icone de volant pour illustrer la formation à la conduite">
+                            <h3>Conduite accélérée</h3>
+                            <p>Apprends à conduire en 10 jours en suivant notre formation accélérée !</p>
+                            <a href="conduite.html"><button class="bouton boutonTertiaire" type="button">
+                                Je passe ma conduite
+                            </button></a>                        
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img class="imageSection" src="images/code-panneaux-route.webp" alt="Panneaux de signalisation qui illustrent le code de la route">
+                        <div id="offre2" class="column offreFormation">
+                            <i class="fa-solid fa-traffic-light fa-3x"></i>
+                            <h3>Code accéléré</h3>
+                            <p>Prépare ton examen du code de la route en 5 jours seulement !</p>
+                            <a href="code.html"><button class="bouton boutonTertiaire" type="button">
+                                Je passe mon code
+                            </button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <img class="transition" src="images/transition-down.svg" alt="Transition entre sections">
+
+            <section class="noustrouver">
+                <div class="column">
+                    <h2>Nous trouver</h2>
+                    <div class="infosContact">
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                            <p>55 boulevard Mansart, 21000 Dijon</p>
+                        </div>
+                    </div>
+
+                    <div class="googleMap">
+                        <gmp-map center="47.30925369262695,5.058010578155518" zoom="14" map-id="DEMO_MAP_ID">
+                            <gmp-advanced-marker position="47.30925369262695,5.058010578155518" title="My location">
+                            </gmp-advanced-marker>
+                        </gmp-map>
+                    </div>
+
+                    <a href="contact.html"><button class="bouton boutonSecondaire" type="button">
+                        Nous contacter
+                    </button></a>
+                </div>
+            </section>
+
+            <img class="transition" src="images/transition-up.svg" alt="Transition entre sections">
+
+            <section class="avis">
+                <div class="column">
+                    <h2>Ils sont satisfaits de K6</h2>
+                    <div class="avisItem">
+                        <div class="photoAvis photoAlex">
+                        </div>
+                        <div class="avisTexte">
+                            <blockquote>
+                                <p>
+                                    « J'ai pu passer mon permis de conduire en accéléré pendant les vancances scolaires. Je suis très satisfait par la formule adaptée à laquelle j'ai pu bénéficier ! »
+                                </p>
+                            </blockquote>
+                            <div class="note">
+                                <div class="etoiles">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p><cite class="accent">Alex</cite> - 23 ans</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="avisItem">
+                        <div class="photoAvis photoLea">
+                        </div>
+                        <div class="avisTexte">
+                            <blockquote>
+                                <p>
+                                    « En tant qu’étudiante, je trouve que les tarifs sont très accessibles. En plus la formation est hyper complète et les moniteurs très compétents ! »
+                                </p>
+                            </blockquote>
+                            <div class="note">
+                                <div class="etoiles">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p><cite class="accent">Léa</cite> - 19 ans</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <img class="transition" src="images/transition-footer.svg" alt="Transition entre sections">
+
+            <footer>
+                <div class="column">
+                    <div class="infosContact">
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                            <p>55 boulevard Mansart, 21000 Dijon</p>
+                        </div>
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-clock"></i>
+                            <p>ouvert de 8h à 20h</p>
+                        </div>
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-phone-alt"></i>
+                            <p>03 55 21 21 21</p>
+                        </div>
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-mail-bulk"></i>
+                            <p>contact@k6-auto-ecole.fr</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column iconesReseaux">
+                    <a class="boutonTexte" href="#"><i class="fa-brands fa-facebook fa-3x"></i></a>
+                    <a class="boutonTexte" href="#"><i class="fa-brands fa-instagram fa-3x"></i></a>
+                </div>
+                <div class="column">
+                    <p><a class="boutonTexte" href="mentions.html">Mentions légales</a></p>
+                    <img src="images/logo-reduit.svg" alt="Logo de K6 AUTO ECOLE">
+                </div>
+            </footer>
+         </main>
+    </body>
+</html>

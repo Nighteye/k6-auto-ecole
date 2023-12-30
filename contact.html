@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>K6 AUTO ECOLE - Nous contacter</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;700&display=swap');
+        </style>
+        <script src="https://kit.fontawesome.com/47be71303f.js" crossorigin="anonymous"></script>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeCPNqA52ScKW0ogmG2m1roZ8pwO8SWD0&callback=console.debug&libraries=maps,marker&v=beta"></script>
+        <script src="js/menu.js"></script>
+    </head>
+
+    <body>
+        <div id="root">
+            <div id="topnav" class="topnav">
+                <a id="home_link" href="index.html"><img src="images/logo-principal.svg" alt="logo principale de K6 AUTO ECOLE"></a>
+                
+                <nav role="navigation" id="classicMenu">
+                    <a class="boutonTopNav" href="conduite.html">Conduite accélérée</a>
+                    <a class="boutonTopNav" href="code.html">Code accéléré</a>
+                    <a class="boutonTopNav" href="contact.html">Contact</a>
+                    <a href="inscription.html"><button class="bouton boutonPrincipal" type="button">
+                        Je m'inscris
+                    </button></a>
+                </nav>
+
+                <div id="menuReduit">
+                    <a href="inscription.html"><button class="bouton boutonPrincipal" type="button">
+                        Je m'inscris
+                    </button></a>
+                    <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+
+                <nav role="navigation" id="topnav_responsive_menu">
+                    <ul>
+                        <li><a id="home_link" href="index.html"><img src="images/logo-principal.svg" alt="logo principale de K6 AUTO ECOLE"></a></li>
+                        <li><a class="boutonTopNav" href="index.html">Accueil</a></li>
+                        <li><a class="boutonTopNav" href="conduite.html">Conduite accélérée</a></li>
+                        <li><a class="boutonTopNav" href="code.html">Code accéléré</a></li>
+                        <li><a class="boutonTopNav" href="inscription.html">Inscription</a></li>
+                        <li><a class="boutonTopNav" href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <main>
+            <header>
+                <div class="column">
+                    <img class="titreH1" src="images/speed.svg">
+                    <h1>Nous contacter</h1>
+                    <p>Besoin d'une information ? Contacte-nous par message, email, téléphone ou bien passe nous voir !</p>
+                </div>
+                <img class="imageSection" src="images/contact.svg" alt="Illustration d'une conductrice qui salue de la main">
+            </header>
+
+            <img class="transition" src="images/transition-up.svg" alt="Transition entre sections">
+
+            <section class="contact">
+                <div class="column">
+                    <h2>Nous trouver</h2>
+                    <div class="infosContact">
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                            <p>55 boulevard Mansart, 21000 Dijon</p>
+                        </div>
+                    </div>
+                    <div class="googleMap">
+                        <gmp-map center="47.30925369262695,5.058010578155518" zoom="14" map-id="DEMO_MAP_ID">
+                            <gmp-advanced-marker position="47.30925369262695,5.058010578155518" title="My location">
+                            </gmp-advanced-marker>
+                        </gmp-map>
+                    </div>
+                </div>
+                <div class="column">
+                    <h2>Nous écrire</h2>
+                    <form>
+                        <p>
+                            <label>Nom :</label> <br>
+                            <input type="text">
+                        </p>
+                        <p>
+                            <label>Prénom :</label> <br>
+                            <input type="text">
+                        </p>
+                        <p>
+                            <label>Objet de votre message :</label> <br>
+                            <input type="text">
+                        </p>
+                        <p>
+                            <label>Votre message :</label> <br>
+                            <textarea></textarea>
+                        </p>
+                        <p><input class="boutonTertiaire" type="submit" value="Envoyer"></p>
+                    </form>
+                </div>
+            </section>
+
+            <img class="transition" src="images/transition-footer.svg" alt="Transition entre sections">
+
+            <footer>
+                <div class="column">
+                    <div class="infosContact">
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                            <p>55 boulevard Mansart, 21000 Dijon</p>
+                        </div>
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-clock"></i>
+                            <p>ouvert de 8h à 20h</p>
+                        </div>
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-phone-alt"></i>
+                            <p>03 55 21 21 21</p>
+                        </div>
+                        <div class="infosContactItem">
+                            <i class="fa-solid fa-mail-bulk"></i>
+                            <p>contact@k6-auto-ecole.fr</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column iconesReseaux">
+                    <a class="boutonTexte" href="#"><i class="fa-brands fa-facebook fa-3x"></i></a>
+                    <a class="boutonTexte" href="#"><i class="fa-brands fa-instagram fa-3x"></i></a>
+                </div>
+                <div class="column">
+                    <p><a class="boutonTexte" href="mentions.html">Mentions légales</a></p>
+                    <img src="images/logo-reduit.svg" alt="Logo de K6 AUTO ECOLE">
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>
