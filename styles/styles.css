@@ -569,7 +569,7 @@ p {
 p span.montantOffre {
     color: var(--Secondaire);
     font-family: Barlow Condensed;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 600;
 }
 
@@ -781,7 +781,7 @@ footer .iconesReseaux {
     }
 
     p span.montantOffre {
-        font-size: 34px;
+        font-size: 50px;
     }
     
     p span.montantAncien {
