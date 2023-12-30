@@ -209,6 +209,10 @@ main > header, section, footer, .column, .row {
     align-self: stretch;
 }
 
+section.contact .column {
+    justify-content: space-between  ;
+}
+
 main > header, section, footer {
 
     padding: 24px;
