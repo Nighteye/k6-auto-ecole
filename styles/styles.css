@@ -409,6 +409,8 @@ gmp-map {
 
 ul {
     list-style-image: url("../images/cassis-bg.svg");
+    font-size: 14px;
+    text-align: left;
 }
 
 /* FORM */
@@ -790,6 +792,12 @@ footer .iconesReseaux {
     
     p span.montantAncien {
         font-size: 26px;
+    }
+
+    /* LISTES */
+
+    ul {
+        font-size: 16px;
     }
 
     .reduction {
